@@ -1,11 +1,11 @@
-.menu_ul
+ul
 {
 	width:686px;
 	height:39px;
 	float:left;
-	background:url(../images/menu_bg_01.gif);
+	background:url(/material/menu_bg_01.gif);
 }
-.menu_ul ul li a:link
+ul ul li a:link
 {
 	color: #FFF;
 	display:block;
@@ -13,7 +13,7 @@
 	height:39px;
 	text-decoration: none;
 }
-.menu_ul ul li a:visited
+ul ul li a:visited
 {
 	text-decoration: none;
 	color: #FFF;
@@ -21,25 +21,25 @@
 	width:105px;
 	height:39px;
 }
-.menu_ul a:active
+ul a:active
 {
 	text-decoration: none;
 	color: #FFF;
 }
-.menu_ul ul
+ul ul
 {
 	list-style-type:none;
 }
-.menu_ul ul li a.current,.menu_ul ul li a:hover
+ul ul li a.current,.menu_ul ul li a:hover
 {
 	display:block;
 	width:105px;
 	height:39px;
 	text-decoration: none;
 	color: #FFF;
-	background:url(../images/menu_current_bg_03.gif) center top no-repeat;
+	background:url(/material/menu_bg_01.gif) center top no-repeat;
 }
-.menu_ul li
+ul li
 {
 	width:105px;
 	float:left;
