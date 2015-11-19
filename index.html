@@ -7,9 +7,9 @@ document.write((zjd=new Date()).getFullYear()+"年"+(zjd.getMonth()+1)+"月"+zjd
 <body>
 <ul>
   <a href="/frame/我的简介.html">我的简介</a>
-  <li><a href="/frame/项目经历.html">项目经历</a></li>
-  <li><a href="/frame/擅长技术.html">擅长技术</a></li>
-  <li><a href="/frame/联系方式.html">联系方式</a></li>
+  <a href="/frame/项目经历.html">项目经历</a>
+  <a href="/frame/擅长技术.html">擅长技术</a>
+  <a href="/frame/联系方式.html">联系方式</a>
 </ul>
 <p>每一个不曾起舞的日子，都是对生命的辜负——尼采</p>
 <img src="/material/img_02.jpg";>
@@ -19,6 +19,25 @@ document.write((zjd=new Date()).getFullYear()+"年"+(zjd.getMonth()+1)+"月"+zjd
     color:#FF0000;
     text-align:center;
   }
+  a:link { 
+color: #666666; 
+text-decoration: none; 
+} 
+a:visited { 
+text-decoration: none; 
+color: #000000; 
+} 
+a:hover { 
+text-decoration: underline; 
+color: #FF0000; 
+} 
+a:active { 
+text-decoration: none; 
+} 
+.link1 a:hover { 
+text-decoration: underline; 
+color: #FFFF00; 
+} 
 </style>
 </body>
 </html>
