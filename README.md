@@ -1,6 +1,6 @@
 # 罗林汉的个人主页
 
-> 质量专家 | 测试管理 | 敏捷实践者
+> 研发质量管理专家 | DevOps 工具链 | AI 大模型测试
 
 [![Last Update](https://img.shields.io/badge/last-update-2026.03-blue)](https://github.com/luolinhan/luolinhan.github.com)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
@@ -16,21 +16,24 @@
 ## 👤 关于我
 
 - **姓名：** 罗林汉
-- **职业：** 质量专家 / 测试经理
-- **经验：** 10 年 + IT 质量管理
+- **年龄：** 37 岁
+- **经验：** 15 年测试领域深耕
+- **现任：** 科大讯飞 | 研发质量管理 - 工具运营
 - **邮箱：** luolinhan666@sina.com
+- **电话：** 137-3924-7505
 - **GitHub：** [@luolinhan](https://github.com/luolinhan)
+- **博客：** http://luolinhan.github.io/
 
 ---
 
 ## 📋 页面内容
 
-- **关于我** - 个人简介与职业定位
-- **工作经历** - 详细的职业发展历程
-- **专业技能** - 测试管理、敏捷开发、技术工具等
-- **专业证书** - H3CSE、H3CNE 等认证
-- **最近在读** - 当前阅读的书籍
-- **联系方式** - 多种联系方式
+- **关于我** - 个人简介与三大核心能力
+- **工作经历** - 5 段职业发展历程（2010 至今）
+- **专业技能** - 测试管理、技术栈、效能工具等
+- **教育背景** - 合肥工业大学计算机科学与技术
+- **专业证书** - H3CSE、H3CNE 认证
+- **联系方式** - 电话、邮箱、GitHub、博客
 
 ---
 
@@ -41,6 +44,8 @@
 - ✅ 清晰的视觉层次
 - ✅ 平滑滚动导航
 - ✅ 专业配色方案
+- ✅ 当前职位高亮显示
+- ✅ 关键成就数据突出
 
 ---
 
@@ -50,11 +55,10 @@
 luolinhan.github.com/
 ├── index.html          # 主页面
 ├── README.md           # 项目说明
-├── material/           # 资源文件
-│   ├── 罗林汉电子照片.jpg
-│   ├── H3CNE.pdf
-│   └── H3CSE.pdf
-└── books/              # 书籍相关资源
+└── material/           # 资源文件
+    ├── 罗林汉电子照片.jpg
+    ├── H3CNE.pdf
+    └── H3CSE.pdf
 ```
 
 ---
@@ -81,9 +85,10 @@ MIT License
 
 ## 📞 联系
 
-- Email: luolinhan666@sina.com
-- QQ: 84315773
+- 电话：137-3924-7505
+- 邮箱：luolinhan666@sina.com
 - GitHub: https://github.com/luolinhan
+- 博客：http://luolinhan.github.io/
 
 ---
 

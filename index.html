@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="罗林汉 - 质量专家 | 10 年 +IT 质量管理经验 | 测试管理 | 敏捷开发">
-    <meta name="keywords" content="罗林汉，质量管理，测试经理，敏捷测试，IT 质量">
+    <meta name="description" content="罗林汉 - 研发质量管理专家 | 15 年测试领域深耕 | DevOps 工具链 | AI 大模型测试">
+    <meta name="keywords" content="罗林汉，质量管理，测试专家，DevOps，AI 测试，科大讯飞">
     <meta name="author" content="Luo Linhan">
-    <title>罗林汉 | 质量专家 - Luo Linhan's Portfolio</title>
+    <title>罗林汉 | 研发质量管理专家 - Luo Linhan's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/material/favicon.ico">
     <style>
         :root {
@@ -107,6 +107,13 @@
         .hero .tagline {
             font-size: 1.5rem;
             opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .hero .quote {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            font-style: italic;
             margin-bottom: 2rem;
         }
 
@@ -175,6 +182,32 @@
             color: var(--text-light);
         }
 
+        .self-eval-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .self-eval-card {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .self-eval-card h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .self-eval-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
         /* Experience Section */
         .timeline {
             position: relative;
@@ -212,6 +245,16 @@
             border: 2px solid white;
         }
 
+        .experience-item.current::before {
+            background: var(--success-color);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
         .experience-header {
             display: flex;
             justify-content: space-between;
@@ -239,6 +282,11 @@
             color: var(--text-light);
         }
 
+        .experience-period.current {
+            background: var(--success-color);
+            color: white;
+        }
+
         .experience-description {
             color: var(--text-light);
             line-height: 1.7;
@@ -251,6 +299,14 @@
 
         .experience-description li {
             margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #92400e;
         }
 
         /* Skills Section */
@@ -285,6 +341,44 @@
             border-radius: 20px;
             font-size: 0.875rem;
             color: var(--text-light);
+        }
+
+        /* Education Section */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .edu-card {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .edu-icon {
+            font-size: 2.5rem;
+        }
+
+        .edu-info h3 {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .edu-info p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .edu-period {
+            color: var(--primary-color);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
         }
 
         /* Certifications */
@@ -336,34 +430,6 @@
             text-decoration: underline;
         }
 
-        /* Reading List */
-        .reading-list {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-        }
-
-        .reading-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .reading-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem;
-            background: var(--bg-light);
-            border-radius: 8px;
-        }
-
-        .reading-item::before {
-            content: '📚';
-            font-size: 1.25rem;
-        }
-
         /* Footer */
         footer {
             background: var(--text-dark);
@@ -411,8 +477,8 @@
                 <li><a href="#about">关于</a></li>
                 <li><a href="#experience">经历</a></li>
                 <li><a href="#skills">技能</a></li>
+                <li><a href="#education">教育</a></li>
                 <li><a href="#certifications">证书</a></li>
-                <li><a href="#reading">阅读</a></li>
                 <li><a href="#contact">联系</a></li>
             </ul>
         </div>
@@ -422,19 +488,20 @@
     <section class="hero">
         <img src="/material/罗林汉电子照片.jpg" alt="罗林汉" class="hero-avatar">
         <h1>罗林汉</h1>
-        <p class="tagline">质量专家 | 测试管理 | 敏捷实践者</p>
-        <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">
-            10 年 + IT 质量管理经验，专注于通信/网络安全/大数据行业，<br>
-            擅长敏捷测试流程与管理，多次担任百万级项目经理
+        <p class="tagline">研发质量管理专家 | DevOps 工具链 | AI 大模型测试</p>
+        <p class="quote">"勇敢的去尝试，就会有故事"</p>
+        <p style="opacity: 0.8; max-width: 700px; margin: 0 auto;">
+            15 年测试领域深耕，具备从网络安全、大数据到 AI 大模型的全栈测试经验<br>
+            现任科大讯飞研发质量管理 - 工具运营，主导集团级测试平台推广与 AI 测试落地
         </p>
         <div class="contact-info">
             <div class="contact-item">
-                <span>📧</span>
-                <a href="mailto:luolinhan666@sina.com">luolinhan666@sina.com</a>
+                <span>📱</span>
+                <a href="tel:13739247505">137-3924-7505</a>
             </div>
             <div class="contact-item">
-                <span>💬</span>
-                <a href="http://shang.qq.com/email/stop/email_stop.html?qq=84315773&sig=03326f25cca0888178bf6220f79b2dbfe27c0c3e262ec14f&tttt=1">QQ: 84315773</a>
+                <span>📧</span>
+                <a href="mailto:luolinhan666@sina.com">luolinhan666@sina.com</a>
             </div>
             <div class="contact-item">
                 <span>🐙</span>
@@ -452,18 +519,33 @@
         <h2 class="section-title">关于我</h2>
         <div class="about-content">
             <p>
-                我是罗林汉，一名资深<strong>质量工程师</strong>，从事 IT 行业质量管理工作<strong>10 余年</strong>。
-                先后在通信、网络安全、大数据行业任职，主要从事测试与质量管理方向。
+                <strong>37 岁</strong> | <strong>本科</strong> | <strong>15 年测试领域经验</strong> | 现居海口
             </p>
             <p>
-                技术出身，在通信、计算机软件、数据库领域经验丰富，熟悉<strong>敏捷测试流程与管理</strong>，
-                执行力强。曾<strong>2 次担任百万级以上软件项目经理</strong>，多次担任测试组长、测试经理、
-                高级工程师等技术管理角色。
+                我是一名资深<strong>研发质量管理专家</strong>，拥有 15 年测试领域深耕经验，
+                具备从<strong>网络安全、大数据到 AI 大模型</strong>的全栈测试经验。
+                擅长从 0 到 1 搭建企业级测试规范，实现测试流程的标准化与闭环管理。
             </p>
             <p>
-                对产品质量及测试事业有浓厚兴趣，有志于长期在行业发展。善于团队建设与管理，
-                倡导简单真诚的部门文化，营造钻研求知的学习氛围。
+                现任<strong>科大讯飞股份有限公司</strong>研发质量管理 - 工具运营岗位，
+                负责智慧城市超脑产线交付质量、集团级测试平台运营及 AI 大模型在测试域的落地。
+                推动测试平台从试点到全集团覆盖，接入项目数从 20 增长至<strong>1000+</strong>。
             </p>
+            
+            <div class="self-eval-grid">
+                <div class="self-eval-card">
+                    <h4>🏗️ 测试体系架构者</h4>
+                    <p>15 年测试领域深耕，擅长从 0 到 1 搭建企业级测试规范，实现测试流程的标准化与闭环管理</p>
+                </div>
+                <div class="self-eval-card">
+                    <h4>⚡ 效能平台专家</h4>
+                    <p>熟悉 IPD 流程，主导千人级研发团队的 DevOps 工具链集成与推广，实现研发资产的完整追溯</p>
+                </div>
+                <div class="self-eval-card">
+                    <h4>📊 数字化质量管理</h4>
+                    <p>擅长构建测试质量度量体系，通过可视化数据看板驱动质量改进，提升自动化覆盖率</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -471,23 +553,42 @@
     <section id="experience">
         <h2 class="section-title">工作经历</h2>
         <div class="timeline">
+            <div class="experience-item current">
+                <div class="experience-header">
+                    <div>
+                        <h3>研发质量管理 - 工具运营</h3>
+                        <p class="experience-company">科大讯飞股份有限公司</p>
+                    </div>
+                    <span class="experience-period current">2020.12 - 至今</span>
+                </div>
+                <div class="experience-description">
+                    <p>负责智慧城市超脑产线交付质量、集团级测试平台运营及 AI 大模型在测试域的落地</p>
+                    <ul>
+                        <li><span class="highlight">质量度量体系</span>：打通教育、医疗等各业务线数据孤岛，建立统一的测试与质量评价指标（自动化率、缺陷逃逸率等），通过可视化看板定期晾晒，驱动业务线质量改进</li>
+                        <li><span class="highlight">效能提升</span>：推动自动化测试落地，集团回归测试自动化率提升，平均测试周期大幅缩短，实现发布效率的提升</li>
+                        <li><span class="highlight">工具链推广</span>：推动测试平台从试点到全集团覆盖，<strong>接入项目数从 20 增长至 1000+</strong>，建立标准化的流水线门禁策略</li>
+                        <li><span class="highlight">AI 大模型工程化</span>：负责测试大模型工具在集团内的推广，至 2024 年底，<strong>采纳用例数达 23 万+</strong>，用户活跃率达<strong>72%</strong></li>
+                        <li><span class="highlight">交付项目管理</span>：负责"城市超脑"、数据中台等 6 个核心项目的交付测试，建立过程交付模型与底线管控机制，保障天津生态城等重大项目按期高质量交付</li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <h3>测试经理</h3>
-                        <p class="experience-company">七天教育科技有限公司</p>
+                        <h3>测试经理 / 测试总监</h3>
+                        <p class="experience-company">安徽七天教育科技有限公司</p>
                     </div>
-                    <span class="experience-period">2018.01 - 至今</span>
+                    <span class="experience-period">2018.01 - 2020.12</span>
                 </div>
                 <div class="experience-description">
                     <p>负责公司所有产品的测试及质量管理，团队规模 25 人</p>
                     <ul>
-                        <li>制定测试流程规范与发布标准，定期组织团队复盘，固化经验到流程</li>
-                        <li>完善测试方法，引入性能测试、接口测试、数据验证测试，提高测试覆盖度</li>
-                        <li>建立线上问题反馈跟踪机制，打通市场与研发部门沟通协作通道</li>
-                        <li>建立测试人员绩效考核机制，多维度评估测试质量</li>
-                        <li>推动运维完成测试环境建设，协调 Jenkins、禅道等平台，提升研发测试效率</li>
-                        <li>带领测试团队完成公司所有产品版本测试、发布工作</li>
+                        <li><span class="highlight">测试体系从 0 到 1 建设</span>：制定并发布《测试流程规范》与发布标准，推行分层测试策略，集成接口测试、性能测试与数据验证测试</li>
+                        <li><span class="highlight">测试基础设施搭建</span>：统筹部署 ZenTao（禅道）、Jenkins、跳板机及 Ops 运维平台，打通研发与测试的工具链</li>
+                        <li><span class="highlight">绩效与人才管理</span>：建立量化绩效考核体系（Bug 有效率、严重等级、线上缺陷率），完成团队人才梯队建设</li>
+                        <li><span class="highlight">非功能性测试专项</span>：独立策划并执行高并发场景下的性能测试与兼容性测试，保障产品上线后的系统稳定性</li>
+                        <li><span class="highlight">跨部门协同</span>：打通市场与研发部门的沟通协作通道，建立线上问题反馈跟踪机制</li>
                     </ul>
                 </div>
             </div>
@@ -495,18 +596,17 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <h3>质量管理/测试工程师</h3>
+                        <h3>教育大数据测试工程师</h3>
                         <p class="experience-company">科大讯飞股份有限公司</p>
                     </div>
-                    <span class="experience-period">2017.03 - 2018.01</span>
+                    <span class="experience-period">2017.02 - 2018.01</span>
                 </div>
                 <div class="experience-description">
                     <p>教育事业部 - 大数据后端计算测试</p>
                     <ul>
-                        <li>负责大数据 ETL 计算结果准确性与完整性测试</li>
-                        <li>编写 SQL 测试脚本，验证大数据指标计算规则</li>
-                        <li>按 Sprint 周期制定测试计划，组织测试框架/用例评审</li>
-                        <li>临时支撑前端测试管理，负责任务分解、外部沟通、能力提升</li>
+                        <li><span class="highlight">大数据后端测试</span>：负责教育大数据指标计算规则验证，编写复杂 SQL 脚本，对 ETL 过程中的数据准确性与完整性进行校验</li>
+                        <li><span class="highlight">测试框架评审</span>：在 Sprint 周期内，主导测试框架与用例评审，负责缺陷 Review，确保阶段性测试输出质量</li>
+                        <li><span class="highlight">前端应急支撑</span>：在项目组前端人力短缺期间，快速补位支撑前端测试工作，负责任务分解与进度管理</li>
                     </ul>
                 </div>
             </div>
@@ -514,18 +614,17 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <h3>质量管理/测试组长</h3>
-                        <p class="experience-company">中新网络信息安全股份有限公司</p>
+                        <h3>质量管理工程师</h3>
+                        <p class="experience-company">中新网络信息安全有限公司</p>
                     </div>
-                    <span class="experience-period">2014.09 - 2017.03</span>
+                    <span class="experience-period">2014.09 - 2017.02</span>
                 </div>
                 <div class="experience-description">
-                    <p>负责防火墙/DDoS/WAF 等网络安全产品的质检工作，团队规模 5 人</p>
+                    <p>负责防火墙、WAF、DDoS 等安全产品的全生命周期质量管理</p>
                     <ul>
-                        <li>制定版本测试计划，设计测试用例，进行测试人员分工</li>
-                        <li>验证 BUG 有效性，根据严重程度进行评级</li>
-                        <li>与研发和产品部门保持沟通，定位并跟踪问题</li>
-                        <li>完成产品的集成测试与系统测试</li>
+                        <li><span class="highlight">安全产品测试</span>：搭建复杂网络环境，模拟泛洪攻击、渗透攻击，验证产品防御能力</li>
+                        <li><span class="highlight">协议分析与识别</span>：参与 APT 研发项目测试，深入分析 FTP、SMB、POP3、SMTP 等协议特征</li>
+                        <li><span class="highlight">系统级测试</span>：负责全局参数配置与规则模块测试，维护核心测试用例库</li>
                     </ul>
                 </div>
             </div>
@@ -533,19 +632,18 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <h3>IT 质量管理经理/主管</h3>
-                        <p class="experience-company">安徽天傲通信有限公司</p>
+                        <h3>项目经理 / 测试组长 / 测试工程师</h3>
+                        <p class="experience-company">安徽天傲通信科技有限公司</p>
                     </div>
                     <span class="experience-period">2010.07 - 2014.09</span>
                 </div>
                 <div class="experience-description">
-                    <p>参与安徽移动省公司数据质量项目，团队规模 12-15 人</p>
+                    <p>服务安徽移动省公司，负责质量竞赛、用户体验提升专项行动</p>
                     <ul>
-                        <li><strong>2013-2014 年 项目经理</strong>：负责安徽省移动用户体验专项行动</li>
-                        <li><strong>2011-2012 年 排障组组长</strong>：负责数据业务排障分析</li>
-                        <li><strong>2010-2011 年 测试工程师</strong>：测试飞信、139 邮箱、彩铃等数据业务</li>
-                        <li>参与安徽移动数据业务质量提升、运营支撑等 4 个百万级以上项目</li>
-                        <li>多次获得客户好评，外派深圳移动进行 3G 业务质量分析</li>
+                        <li><strong>2013-2014 年</strong> 项目经理：安徽省移动用户体验专项行动</li>
+                        <li><strong>2012 年</strong> 测试组长：数据业务质量提升专项行动</li>
+                        <li><strong>2011 年</strong> 测试组长：质量提升劳动竞赛项目（外派深圳移动）</li>
+                        <li><strong>2010 年</strong> 测试工程师：增值业务大会战项目</li>
                     </ul>
                 </div>
             </div>
@@ -557,14 +655,25 @@
         <h2 class="section-title">专业技能</h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>🔧 测试管理</h3>
+                <h3>🏗️ 测试管理</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">测试计划</span>
-                    <span class="skill-tag">用例设计</span>
-                    <span class="skill-tag">缺陷管理</span>
-                    <span class="skill-tag">测试报告</span>
-                    <span class="skill-tag">质量度量</span>
+                    <span class="skill-tag">DevOps</span>
+                    <span class="skill-tag">IPD 流程</span>
+                    <span class="skill-tag">质量度量体系</span>
+                    <span class="skill-tag">测试规范</span>
+                    <span class="skill-tag">闭环管理</span>
                     <span class="skill-tag">风险管理</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>🛠️ 技术栈</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">JMeter</span>
+                    <span class="skill-tag">接口测试</span>
+                    <span class="skill-tag">自动化框架</span>
                 </div>
             </div>
             <div class="skill-card">
@@ -576,50 +685,63 @@
                     <span class="skill-tag">兼容性测试</span>
                     <span class="skill-tag">安全测试</span>
                     <span class="skill-tag">大数据测试</span>
+                    <span class="skill-tag">AI 模型测试</span>
                 </div>
             </div>
             <div class="skill-card">
-                <h3>🔄 敏捷开发</h3>
+                <h3>🔄 效能工具</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Scrum</span>
-                    <span class="skill-tag">Sprint 规划</span>
-                    <span class="skill-tag">持续集成</span>
+                    <span class="skill-tag">禅道 ZenTao</span>
                     <span class="skill-tag">Jenkins</span>
-                    <span class="skill-tag">禅道</span>
-                    <span class="skill-tag">敏捷测试</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>🛠️ 技术工具</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Wireshark</span>
-                    <span class="skill-tag">TCPDump</span>
-                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">CI/CD 流水线</span>
+                    <span class="skill-tag">Ops 运维平台</span>
                     <span class="skill-tag">Git/SVN</span>
                     <span class="skill-tag">JIRA</span>
                 </div>
             </div>
             <div class="skill-card">
-                <h3>🌐 网络知识</h3>
+                <h3>🌐 网络与安全</h3>
                 <div class="skill-tags">
                     <span class="skill-tag">TCP/IP</span>
                     <span class="skill-tag">路由交换</span>
                     <span class="skill-tag">防火墙</span>
                     <span class="skill-tag">WAF</span>
                     <span class="skill-tag">DDoS 防护</span>
-                    <span class="skill-tag">网络安全</span>
+                    <span class="skill-tag">协议分析</span>
                 </div>
             </div>
             <div class="skill-card">
-                <h3>👥 团队管理</h3>
+                <h3>👥 软技能</h3>
                 <div class="skill-tags">
+                    <span class="skill-tag">跨组织协调</span>
                     <span class="skill-tag">团队建设</span>
-                    <span class="skill-tag">人员培养</span>
-                    <span class="skill-tag">绩效考核</span>
-                    <span class="skill-tag">项目管理</span>
-                    <span class="skill-tag">沟通协调</span>
-                    <span class="skill-tag">流程优化</span>
+                    <span class="skill-tag">售前支持</span>
+                    <span class="skill-tag">客户成功</span>
+                    <span class="skill-tag">品牌运营</span>
+                    <span class="skill-tag">数据驱动</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">教育背景</h2>
+        <div class="edu-grid">
+            <div class="edu-card">
+                <div class="edu-icon">🎓</div>
+                <div class="edu-info">
+                    <h3>合肥工业大学</h3>
+                    <p>计算机科学与技术 | 本科（专升本）</p>
+                    <p class="edu-period">2013.09 - 2015.07</p>
+                </div>
+            </div>
+            <div class="edu-card">
+                <div class="edu-icon">📚</div>
+                <div class="edu-info">
+                    <h3>安徽邮电职业技术学院</h3>
+                    <p>通信工程 | 专科</p>
+                    <p class="edu-period">2007.09 - 2010.07</p>
                 </div>
             </div>
         </div>
@@ -641,51 +763,6 @@
                 <p>华三认证网络工程师</p>
                 <a href="/material/H3CNE.pdf" class="cert-link" target="_blank">查看证书 →</a>
             </div>
-            <div class="cert-card">
-                <div class="cert-icon">📜</div>
-                <h3>通信安全员</h3>
-                <p>国家通信安全员 (B 类)</p>
-                <span class="cert-link">2012 年获得</span>
-            </div>
-            <div class="cert-card">
-                <div class="cert-icon">🎓</div>
-                <h3>本科学历</h3>
-                <p>计算机相关专业</p>
-                <span class="cert-link">2010 年毕业</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reading Section -->
-    <section id="reading">
-        <h2 class="section-title">最近在读</h2>
-        <div class="reading-list">
-            <div class="reading-grid">
-                <div class="reading-item">HTTP 权威指南</div>
-                <div class="reading-item">深入敏捷测试</div>
-                <div class="reading-item">大数据治理与服务</div>
-                <div class="reading-item">持续交付</div>
-                <div class="reading-item">黑客与画家</div>
-                <div class="reading-item">改善</div>
-                <div class="reading-item">西方哲学史</div>
-                <div class="reading-item">原则</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Other Experience -->
-    <section>
-        <h2 class="section-title">其他经历</h2>
-        <div class="about-content">
-            <p>
-                <strong>🌱 乡村支教</strong>（2008-2009 年暑假）<br>
-                与两名高中同学在合肥市肥东县八斗乡农村支教，教授小学 2 年级至初中 2 年级学生，
-                负责数学科目，班级规模 35-42 人。
-            </p>
-            <p>
-                <strong>💻 行业会议</strong><br>
-                参加 2013 年度杭州阿里云计算大会，关注云计算与大数据技术发展趋势。
-            </p>
         </div>
     </section>
 
@@ -694,20 +771,27 @@
         <h2 class="section-title">联系我</h2>
         <div class="about-content" style="text-align: center;">
             <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                求职意向：<strong>售前 / 运营</strong> | 期望城市：<strong>海口</strong> | 到岗时间：<strong>一个月内</strong>
+            </p>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
                 欢迎交流合作机会，期待与您共同探讨质量管理与测试技术！
             </p>
             <div class="contact-info" style="justify-content: center;">
+                <div class="contact-item" style="color: var(--text-dark);">
+                    <span>📱</span>
+                    <a href="tel:13739247505" style="color: var(--primary-color);">137-3924-7505</a>
+                </div>
                 <div class="contact-item" style="color: var(--text-dark);">
                     <span>📧</span>
                     <a href="mailto:luolinhan666@sina.com" style="color: var(--primary-color);">luolinhan666@sina.com</a>
                 </div>
                 <div class="contact-item" style="color: var(--text-dark);">
-                    <span>💬</span>
-                    <span>QQ: 84315773</span>
-                </div>
-                <div class="contact-item" style="color: var(--text-dark);">
                     <span>🐙</span>
                     <a href="https://github.com/luolinhan" target="_blank" rel="noopener" style="color: var(--primary-color);">github.com/luolinhan</a>
+                </div>
+                <div class="contact-item" style="color: var(--text-dark);">
+                    <span>📝</span>
+                    <a href="http://luolinhan.github.io/" target="_blank" rel="noopener" style="color: var(--primary-color);">luolinhan.github.io</a>
                 </div>
             </div>
         </div>
