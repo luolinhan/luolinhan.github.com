@@ -1,60 +1,748 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<meta http-eiuiv="content-type";content=text/html;chaset=utf-8>
-<title>
-LuoLinhan's resume
-</title>
-<h1>
-LuoLinhan's resume
-</h1>
-<hr />
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="罗林汉 - 质量专家 | 10 年 +IT 质量管理经验 | 测试管理 | 敏捷开发">
+    <meta name="keywords" content="罗林汉，质量管理，测试经理，敏捷测试，IT 质量">
+    <meta name="author" content="Luo Linhan">
+    <title>罗林汉 | 质量专家 - Luo Linhan's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/material/favicon.ico">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
 
-<script>
-document.write((zjd=new Date()).getFullYear()+"年"+(zjd.getMonth()+1)+"月"+zjd.getDate()
-+ "日 星期"+"日一二三四五六".charAt(zjd.getDay())+ " "+zjd.getHours() +":"+zjd.getMinutes()+":"+zjd.getSeconds());
-</script>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
 
+        /* Navigation */
+        nav {
+            background: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 8rem 2rem 6rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero-avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: var(--shadow-lg);
+            object-fit: cover;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .hero .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .hero .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .hero .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .hero .contact-item a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-content {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .experience-item {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .experience-header h3 {
+            color: var(--text-dark);
+            font-size: 1.25rem;
+        }
+
+        .experience-company {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .experience-period {
+            background: var(--bg-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .experience-description {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .experience-description ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .experience-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .skill-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: var(--bg-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cert-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-card h3 {
+            color: var(--text-dark);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card p {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        .cert-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .cert-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Reading List */
+        .reading-list {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .reading-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .reading-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+        }
+
+        .reading-item::before {
+            content: '📚';
+            font-size: 1.25rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
 <body>
-<ul>
-  <p><a href="/frame/我的简介.html">我的简介</a>
-  <p><a href="/frame/联系方式.html">联系方式</a>
-  <p><a href="/frame/最近在读.html">最近在读</a>
-</ul>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">Luo Linhan</a>
+            <ul class="nav-links">
+                <li><a href="#about">关于</a></li>
+                <li><a href="#experience">经历</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#certifications">证书</a></li>
+                <li><a href="#reading">阅读</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<img src="/material/img_02.jpg";>
-<style type=text/css>
-h1{
-  font-size: 25px;
-  color: red;
-  text-align: left;
-  font-family: SimHei;
-}
-  body{
-    font-size:20px;
-    color:#FF0000;
-    text-align:left;
-    font-family: microsoft yahei;
-  }
-  a:link { 
-color: #666666; 
-text-decoration: none; 
-} 
-a:visited { 
-text-decoration: none; 
-color: #000000; 
-} 
-a:hover { 
-text-decoration: underline; 
-color: #FF0000; 
-} 
-a:active { 
-text-decoration: none; 
-} 
-.link1 a:hover { 
-text-decoration: underline; 
-color: #FFFF00; 
-} 
-</style>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="/material/罗林汉电子照片.jpg" alt="罗林汉" class="hero-avatar">
+        <h1>罗林汉</h1>
+        <p class="tagline">质量专家 | 测试管理 | 敏捷实践者</p>
+        <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">
+            10 年 + IT 质量管理经验，专注于通信/网络安全/大数据行业，<br>
+            擅长敏捷测试流程与管理，多次担任百万级项目经理
+        </p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📧</span>
+                <a href="mailto:luolinhan666@sina.com">luolinhan666@sina.com</a>
+            </div>
+            <div class="contact-item">
+                <span>💬</span>
+                <a href="http://shang.qq.com/email/stop/email_stop.html?qq=84315773&sig=03326f25cca0888178bf6220f79b2dbfe27c0c3e262ec14f&tttt=1">QQ: 84315773</a>
+            </div>
+            <div class="contact-item">
+                <span>🐙</span>
+                <a href="https://github.com/luolinhan" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="contact-item">
+                <span>📝</span>
+                <a href="http://luolinhan.github.io/" target="_blank" rel="noopener">博客</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">关于我</h2>
+        <div class="about-content">
+            <p>
+                我是罗林汉，一名资深<strong>质量工程师</strong>，从事 IT 行业质量管理工作<strong>10 余年</strong>。
+                先后在通信、网络安全、大数据行业任职，主要从事测试与质量管理方向。
+            </p>
+            <p>
+                技术出身，在通信、计算机软件、数据库领域经验丰富，熟悉<strong>敏捷测试流程与管理</strong>，
+                执行力强。曾<strong>2 次担任百万级以上软件项目经理</strong>，多次担任测试组长、测试经理、
+                高级工程师等技术管理角色。
+            </p>
+            <p>
+                对产品质量及测试事业有浓厚兴趣，有志于长期在行业发展。善于团队建设与管理，
+                倡导简单真诚的部门文化，营造钻研求知的学习氛围。
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">工作经历</h2>
+        <div class="timeline">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>测试经理</h3>
+                        <p class="experience-company">七天教育科技有限公司</p>
+                    </div>
+                    <span class="experience-period">2018.01 - 至今</span>
+                </div>
+                <div class="experience-description">
+                    <p>负责公司所有产品的测试及质量管理，团队规模 25 人</p>
+                    <ul>
+                        <li>制定测试流程规范与发布标准，定期组织团队复盘，固化经验到流程</li>
+                        <li>完善测试方法，引入性能测试、接口测试、数据验证测试，提高测试覆盖度</li>
+                        <li>建立线上问题反馈跟踪机制，打通市场与研发部门沟通协作通道</li>
+                        <li>建立测试人员绩效考核机制，多维度评估测试质量</li>
+                        <li>推动运维完成测试环境建设，协调 Jenkins、禅道等平台，提升研发测试效率</li>
+                        <li>带领测试团队完成公司所有产品版本测试、发布工作</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>质量管理/测试工程师</h3>
+                        <p class="experience-company">科大讯飞股份有限公司</p>
+                    </div>
+                    <span class="experience-period">2017.03 - 2018.01</span>
+                </div>
+                <div class="experience-description">
+                    <p>教育事业部 - 大数据后端计算测试</p>
+                    <ul>
+                        <li>负责大数据 ETL 计算结果准确性与完整性测试</li>
+                        <li>编写 SQL 测试脚本，验证大数据指标计算规则</li>
+                        <li>按 Sprint 周期制定测试计划，组织测试框架/用例评审</li>
+                        <li>临时支撑前端测试管理，负责任务分解、外部沟通、能力提升</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>质量管理/测试组长</h3>
+                        <p class="experience-company">中新网络信息安全股份有限公司</p>
+                    </div>
+                    <span class="experience-period">2014.09 - 2017.03</span>
+                </div>
+                <div class="experience-description">
+                    <p>负责防火墙/DDoS/WAF 等网络安全产品的质检工作，团队规模 5 人</p>
+                    <ul>
+                        <li>制定版本测试计划，设计测试用例，进行测试人员分工</li>
+                        <li>验证 BUG 有效性，根据严重程度进行评级</li>
+                        <li>与研发和产品部门保持沟通，定位并跟踪问题</li>
+                        <li>完成产品的集成测试与系统测试</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>IT 质量管理经理/主管</h3>
+                        <p class="experience-company">安徽天傲通信有限公司</p>
+                    </div>
+                    <span class="experience-period">2010.07 - 2014.09</span>
+                </div>
+                <div class="experience-description">
+                    <p>参与安徽移动省公司数据质量项目，团队规模 12-15 人</p>
+                    <ul>
+                        <li><strong>2013-2014 年 项目经理</strong>：负责安徽省移动用户体验专项行动</li>
+                        <li><strong>2011-2012 年 排障组组长</strong>：负责数据业务排障分析</li>
+                        <li><strong>2010-2011 年 测试工程师</strong>：测试飞信、139 邮箱、彩铃等数据业务</li>
+                        <li>参与安徽移动数据业务质量提升、运营支撑等 4 个百万级以上项目</li>
+                        <li>多次获得客户好评，外派深圳移动进行 3G 业务质量分析</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">专业技能</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>🔧 测试管理</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">测试计划</span>
+                    <span class="skill-tag">用例设计</span>
+                    <span class="skill-tag">缺陷管理</span>
+                    <span class="skill-tag">测试报告</span>
+                    <span class="skill-tag">质量度量</span>
+                    <span class="skill-tag">风险管理</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>📊 测试类型</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">功能测试</span>
+                    <span class="skill-tag">性能测试</span>
+                    <span class="skill-tag">接口测试</span>
+                    <span class="skill-tag">兼容性测试</span>
+                    <span class="skill-tag">安全测试</span>
+                    <span class="skill-tag">大数据测试</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>🔄 敏捷开发</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Scrum</span>
+                    <span class="skill-tag">Sprint 规划</span>
+                    <span class="skill-tag">持续集成</span>
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">禅道</span>
+                    <span class="skill-tag">敏捷测试</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>🛠️ 技术工具</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Wireshark</span>
+                    <span class="skill-tag">TCPDump</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Git/SVN</span>
+                    <span class="skill-tag">JIRA</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>🌐 网络知识</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">TCP/IP</span>
+                    <span class="skill-tag">路由交换</span>
+                    <span class="skill-tag">防火墙</span>
+                    <span class="skill-tag">WAF</span>
+                    <span class="skill-tag">DDoS 防护</span>
+                    <span class="skill-tag">网络安全</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>👥 团队管理</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">团队建设</span>
+                    <span class="skill-tag">人员培养</span>
+                    <span class="skill-tag">绩效考核</span>
+                    <span class="skill-tag">项目管理</span>
+                    <span class="skill-tag">沟通协调</span>
+                    <span class="skill-tag">流程优化</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2 class="section-title">专业证书</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-icon">🏆</div>
+                <h3>H3CSE</h3>
+                <p>华三认证路由交换<br>网络高级工程师</p>
+                <a href="/material/H3CSE.pdf" class="cert-link" target="_blank">查看证书 →</a>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🏅</div>
+                <h3>H3CNE</h3>
+                <p>华三认证网络工程师</p>
+                <a href="/material/H3CNE.pdf" class="cert-link" target="_blank">查看证书 →</a>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h3>通信安全员</h3>
+                <p>国家通信安全员 (B 类)</p>
+                <span class="cert-link">2012 年获得</span>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🎓</div>
+                <h3>本科学历</h3>
+                <p>计算机相关专业</p>
+                <span class="cert-link">2010 年毕业</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reading Section -->
+    <section id="reading">
+        <h2 class="section-title">最近在读</h2>
+        <div class="reading-list">
+            <div class="reading-grid">
+                <div class="reading-item">HTTP 权威指南</div>
+                <div class="reading-item">深入敏捷测试</div>
+                <div class="reading-item">大数据治理与服务</div>
+                <div class="reading-item">持续交付</div>
+                <div class="reading-item">黑客与画家</div>
+                <div class="reading-item">改善</div>
+                <div class="reading-item">西方哲学史</div>
+                <div class="reading-item">原则</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Experience -->
+    <section>
+        <h2 class="section-title">其他经历</h2>
+        <div class="about-content">
+            <p>
+                <strong>🌱 乡村支教</strong>（2008-2009 年暑假）<br>
+                与两名高中同学在合肥市肥东县八斗乡农村支教，教授小学 2 年级至初中 2 年级学生，
+                负责数学科目，班级规模 35-42 人。
+            </p>
+            <p>
+                <strong>💻 行业会议</strong><br>
+                参加 2013 年度杭州阿里云计算大会，关注云计算与大数据技术发展趋势。
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">联系我</h2>
+        <div class="about-content" style="text-align: center;">
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                欢迎交流合作机会，期待与您共同探讨质量管理与测试技术！
+            </p>
+            <div class="contact-info" style="justify-content: center;">
+                <div class="contact-item" style="color: var(--text-dark);">
+                    <span>📧</span>
+                    <a href="mailto:luolinhan666@sina.com" style="color: var(--primary-color);">luolinhan666@sina.com</a>
+                </div>
+                <div class="contact-item" style="color: var(--text-dark);">
+                    <span>💬</span>
+                    <span>QQ: 84315773</span>
+                </div>
+                <div class="contact-item" style="color: var(--text-dark);">
+                    <span>🐙</span>
+                    <a href="https://github.com/luolinhan" target="_blank" rel="noopener" style="color: var(--primary-color);">github.com/luolinhan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> 罗林汉 | Luo Linhan</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem; opacity: 0.7;">
+            最后更新：<span id="lastUpdate"></span>
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+            <a href="http://luolinhan.github.io/" target="_blank" rel="noopener">博客</a> ·
+            <a href="https://github.com/luolinhan" target="_blank" rel="noopener">GitHub</a>
+        </p>
+    </footer>
+
+    <script>
+        // Update year and last update time
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('lastUpdate').textContent = document.lastModified.split(' ')[0];
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
