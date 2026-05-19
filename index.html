@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="罗林汉 - 研发质量管理专家 | 15 年测试领域深耕 | DevOps 工具链 | AI 大模型测试">
-    <meta name="keywords" content="罗林汉，质量管理，测试专家，DevOps，AI 测试，科大讯飞">
+    <meta name="description" content="罗林汉 - AI解决方案架构师 | AI产业研究者 | 15年技术落地经验">
+    <meta name="keywords" content="罗林汉，AI解决方案，架构师，AI产业，大模型，系统架构，科大讯飞">
     <meta name="author" content="Luo Linhan">
-    <title>罗林汉 | 研发质量管理专家 - Luo Linhan's Portfolio</title>
+    <title>罗林汉 | AI解决方案架构师 - Luo Linhan's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/material/favicon.ico">
     <style>
         :root {
@@ -19,6 +19,7 @@
             --bg-white: #ffffff;
             --border-color: #e5e7eb;
             --success-color: #10b981;
+            --ai-color: #8b5cf6;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
@@ -81,7 +82,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: linear-gradient(135deg, var(--ai-color) 0%, var(--primary-color) 50%, var(--secondary-color) 100%);
             color: white;
             padding: 8rem 2rem 6rem;
             text-align: center;
@@ -163,7 +164,7 @@
             display: block;
             width: 60px;
             height: 4px;
-            background: var(--primary-color);
+            background: var(--ai-color);
             margin: 1rem auto 0;
             border-radius: 2px;
         }
@@ -193,7 +194,7 @@
             background: var(--bg-light);
             padding: 1.5rem;
             border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
+            border-left: 4px solid var(--ai-color);
         }
 
         .self-eval-card h4 {
@@ -270,7 +271,7 @@
         }
 
         .experience-company {
-            color: var(--primary-color);
+            color: var(--ai-color);
             font-weight: 600;
         }
 
@@ -302,11 +303,11 @@
         }
 
         .highlight {
-            background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
+            background: linear-gradient(120deg, #e0e7ff 0%, #c7d2fe 100%);
             padding: 0.15rem 0.5rem;
             border-radius: 4px;
             font-weight: 600;
-            color: #92400e;
+            color: var(--ai-color);
         }
 
         /* Skills Section */
@@ -324,7 +325,7 @@
         }
 
         .skill-card h3 {
-            color: var(--primary-color);
+            color: var(--ai-color);
             margin-bottom: 1rem;
             font-size: 1.1rem;
         }
@@ -341,6 +342,56 @@
             border-radius: 20px;
             font-size: 0.875rem;
             color: var(--text-light);
+        }
+
+        .skill-tag.ai-highlight {
+            background: linear-gradient(120deg, #e0e7ff 0%, #c7d2fe 100%);
+            color: var(--ai-color);
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-top: 3px solid var(--ai-color);
+        }
+
+        .project-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .project-card .project-type {
+            color: var(--ai-color);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
         }
 
         /* Education Section */
@@ -476,6 +527,7 @@
             <ul class="nav-links">
                 <li><a href="#about">关于</a></li>
                 <li><a href="#experience">经历</a></li>
+                <li><a href="#projects">AI项目</a></li>
                 <li><a href="#skills">技能</a></li>
                 <li><a href="#education">教育</a></li>
                 <li><a href="#certifications">证书</a></li>
@@ -488,11 +540,11 @@
     <section class="hero">
         <img src="/material/罗林汉电子照片.jpg" alt="罗林汉" class="hero-avatar">
         <h1>罗林汉</h1>
-        <p class="tagline">研发质量管理专家 | DevOps 工具链 | AI 大模型测试</p>
-        <p class="quote">"勇敢的去尝试，就会有故事"</p>
+        <p class="tagline">AI解决方案架构师 | AI产业研究者 | 系统架构与落地</p>
+        <p class="quote">"用技术理解产业，用产业驱动落地"</p>
         <p style="opacity: 0.8; max-width: 700px; margin: 0 auto;">
-            15 年测试领域深耕，具备从网络安全、大数据到 AI 大模型的全栈测试经验<br>
-            现任科大讯飞研发质量管理 - 工具运营，主导集团级测试平台推广与 AI 测试落地
+            15年技术落地经验，深耕AI产业全景跟踪与解决方案设计<br>
+            擅长将AI技术转化为行业可落地的解决方案，具备从需求分析到系统交付的全链路能力
         </p>
         <div class="contact-info">
             <div class="contact-item">
@@ -501,7 +553,7 @@
             </div>
             <div class="contact-item">
                 <span>📧</span>
-                <a href="mailto:luolinhan666@sina.com">luolinhan666@sina.com</a>
+                <a href="mailto:luolinhan666@gmail.com">luolinhan666@gmail.com</a>
             </div>
             <div class="contact-item">
                 <span>🐙</span>
@@ -519,31 +571,30 @@
         <h2 class="section-title">关于我</h2>
         <div class="about-content">
             <p>
-                <strong>37 岁</strong> | <strong>本科</strong> | <strong>15 年测试领域经验</strong> | 现居海口
+                <strong>37 岁</strong> | <strong>本科</strong> | <strong>15年技术落地经验</strong> | 现居海口
             </p>
             <p>
-                我是一名资深<strong>研发质量管理专家</strong>，拥有 15 年测试领域深耕经验，
-                具备从<strong>网络安全、大数据到 AI 大模型</strong>的全栈测试经验。
-                擅长从 0 到 1 搭建企业级测试规范，实现测试流程的标准化与闭环管理。
+                我是一名<strong>AI解决方案架构师</strong>，拥有15年从测试体系搭建到AI技术落地的全链路经验。
+                深耕<strong>AI产业全景跟踪</strong>，具备从<strong>需求分析、技术选型、架构设计到系统交付</strong>的完整解决方案能力。
             </p>
             <p>
-                现任<strong>科大讯飞股份有限公司</strong>研发质量管理 - 工具运营岗位，
-                负责智慧城市超脑产线交付质量、集团级测试平台运营及 AI 大模型在测试域的落地。
-                推动测试平台从试点到全集团覆盖，接入项目数从 20 增长至<strong>1000+</strong>。
+                现任<strong>科大讯飞股份有限公司</strong>研发质量管理岗位，主导集团级AI测试平台运营与AI大模型落地。
+                同时独立构建<strong>AI产业全景跟踪系统</strong>，覆盖模型榜单、价格、产业链、投资闭环等维度，
+                已部署至阿里云并持续运行。具备将AI技术与<strong>金融、政务、企业</strong>等行业场景结合的实战经验。
             </p>
-            
+
             <div class="self-eval-grid">
                 <div class="self-eval-card">
-                    <h4>🏗️ 测试体系架构者</h4>
-                    <p>15 年测试领域深耕，擅长从 0 到 1 搭建企业级测试规范，实现测试流程的标准化与闭环管理</p>
+                    <h4>🤖 AI产业深度研究者</h4>
+                    <p>独立构建AI产业全景跟踪系统，覆盖模型榜单、价格、CapEx、产业链、投资闭环，数据采集/解析/可视化全链路自研，持续跟踪AI产业动态</p>
                 </div>
                 <div class="self-eval-card">
-                    <h4>⚡ 效能平台专家</h4>
-                    <p>熟悉 IPD 流程，主导千人级研发团队的 DevOps 工具链集成与推广，实现研发资产的完整追溯</p>
+                    <h4>🏗️ 解决方案架构设计</h4>
+                    <p>15年系统落地经验，擅长从需求分析到系统交付的全链路方案设计，具备技术选型、架构设计、系统集成、项目管理完整能力</p>
                 </div>
                 <div class="self-eval-card">
-                    <h4>📊 数字化质量管理</h4>
-                    <p>擅长构建测试质量度量体系，通过可视化数据看板驱动质量改进，提升自动化覆盖率</p>
+                    <h4>📊 行业AI落地实践</h4>
+                    <p>推动AI大模型在集团内落地，采纳用例23万+，用户活跃率72%；具备金融(DCF/港股)、政务(城市超脑)、企业(飞书/协同)行业经验</p>
                 </div>
             </div>
         </div>
@@ -556,19 +607,19 @@
             <div class="experience-item current">
                 <div class="experience-header">
                     <div>
-                        <h3>研发质量管理 - 工具运营</h3>
+                        <h3>研发质量管理 - AI工具运营</h3>
                         <p class="experience-company">科大讯飞股份有限公司</p>
                     </div>
                     <span class="experience-period current">2020.12 - 至今</span>
                 </div>
                 <div class="experience-description">
-                    <p>负责智慧城市超脑产线交付质量、集团级测试平台运营及 AI 大模型在测试域的落地</p>
+                    <p>负责智慧城市超脑产线交付、集团级AI测试平台运营及AI大模型落地推广</p>
                     <ul>
-                        <li><span class="highlight">质量度量体系</span>：打通教育、医疗等各业务线数据孤岛，建立统一的测试与质量评价指标（自动化率、缺陷逃逸率等），通过可视化看板定期晾晒，驱动业务线质量改进</li>
-                        <li><span class="highlight">效能提升</span>：推动自动化测试落地，集团回归测试自动化率提升，平均测试周期大幅缩短，实现发布效率的提升</li>
-                        <li><span class="highlight">工具链推广</span>：推动测试平台从试点到全集团覆盖，<strong>接入项目数从 20 增长至 1000+</strong>，建立标准化的流水线门禁策略</li>
-                        <li><span class="highlight">AI 大模型工程化</span>：负责测试大模型工具在集团内的推广，至 2024 年底，<strong>采纳用例数达 23 万+</strong>，用户活跃率达<strong>72%</strong></li>
-                        <li><span class="highlight">交付项目管理</span>：负责"城市超脑"、数据中台等 6 个核心项目的交付测试，建立过程交付模型与底线管控机制，保障天津生态城等重大项目按期高质量交付</li>
+                        <li><span class="highlight">AI大模型工程化落地</span>：主导测试大模型工具在集团内推广，至2024年底<strong>采纳用例数达23万+</strong>，用户活跃率<strong>72%</strong>，实现AI技术从试点到规模化落地</li>
+                        <li><span class="highlight">解决方案设计</span>：为教育、医疗、政务等业务线设计AI测试解决方案，打通数据孤岛，建立统一质量评价指标体系</li>
+                        <li><span class="highlight">效能平台推广</span>：推动测试平台从试点到全集团覆盖，<strong>接入项目数从20增长至1000+</strong>，设计标准化流水线门禁策略</li>
+                        <li><span class="highlight">交付项目管理</span>：负责"城市超脑"、数据中台等6个核心项目交付，建立过程交付模型与底线管控机制</li>
+                        <li><span class="highlight">技术架构优化</span>：推动自动化测试落地，集团回归测试自动化率提升，平均测试周期缩短，实现发布效率提升</li>
                     </ul>
                 </div>
             </div>
@@ -582,12 +633,11 @@
                     <span class="experience-period">2018.01 - 2020.12</span>
                 </div>
                 <div class="experience-description">
-                    <p>负责公司所有产品的测试及质量管理，团队规模 25 人</p>
+                    <p>负责公司所有产品的测试及质量管理，团队规模25人</p>
                     <ul>
-                        <li><span class="highlight">测试体系从 0 到 1 建设</span>：制定并发布《测试流程规范》与发布标准，推行分层测试策略，集成接口测试、性能测试与数据验证测试</li>
-                        <li><span class="highlight">测试基础设施搭建</span>：统筹部署 ZenTao（禅道）、Jenkins、跳板机及 Ops 运维平台，打通研发与测试的工具链</li>
-                        <li><span class="highlight">绩效与人才管理</span>：建立量化绩效考核体系（Bug 有效率、严重等级、线上缺陷率），完成团队人才梯队建设</li>
-                        <li><span class="highlight">非功能性测试专项</span>：独立策划并执行高并发场景下的性能测试与兼容性测试，保障产品上线后的系统稳定性</li>
+                        <li><span class="highlight">测试体系从0到1建设</span>：制定并发布《测试流程规范》与发布标准，推行分层测试策略，设计完整的质量解决方案</li>
+                        <li><span class="highlight">技术架构搭建</span>：统筹部署ZenTao、Jenkins、跳板机及Ops运维平台，打通研发与测试的工具链</li>
+                        <li><span class="highlight">团队与绩效管理</span>：建立量化绩效考核体系，完成团队人才梯队建设</li>
                         <li><span class="highlight">跨部门协同</span>：打通市场与研发部门的沟通协作通道，建立线上问题反馈跟踪机制</li>
                     </ul>
                 </div>
@@ -604,9 +654,9 @@
                 <div class="experience-description">
                     <p>教育事业部 - 大数据后端计算测试</p>
                     <ul>
-                        <li><span class="highlight">大数据后端测试</span>：负责教育大数据指标计算规则验证，编写复杂 SQL 脚本，对 ETL 过程中的数据准确性与完整性进行校验</li>
-                        <li><span class="highlight">测试框架评审</span>：在 Sprint 周期内，主导测试框架与用例评审，负责缺陷 Review，确保阶段性测试输出质量</li>
-                        <li><span class="highlight">前端应急支撑</span>：在项目组前端人力短缺期间，快速补位支撑前端测试工作，负责任务分解与进度管理</li>
+                        <li><span class="highlight">大数据测试方案设计</span>：负责教育大数据指标计算规则验证，编写复杂SQL脚本，设计ETL数据校验方案</li>
+                        <li><span class="highlight">测试框架评审</span>：在Sprint周期内，主导测试框架与用例评审，负责缺陷Review</li>
+                        <li><span class="highlight">应急支撑</span>：在前端人力短缺期间，快速补位支撑前端测试工作，负责任务分解与进度管理</li>
                     </ul>
                 </div>
             </div>
@@ -620,11 +670,11 @@
                     <span class="experience-period">2014.09 - 2017.02</span>
                 </div>
                 <div class="experience-description">
-                    <p>负责防火墙、WAF、DDoS 等安全产品的全生命周期质量管理</p>
+                    <p>负责防火墙、WAF、DDoS等安全产品的全生命周期质量管理</p>
                     <ul>
-                        <li><span class="highlight">安全产品测试</span>：搭建复杂网络环境，模拟泛洪攻击、渗透攻击，验证产品防御能力</li>
-                        <li><span class="highlight">协议分析与识别</span>：参与 APT 研发项目测试，深入分析 FTP、SMB、POP3、SMTP 等协议特征</li>
-                        <li><span class="highlight">系统级测试</span>：负责全局参数配置与规则模块测试，维护核心测试用例库</li>
+                        <li><span class="highlight">安全产品测试方案</span>：搭建复杂网络环境，模拟泛洪攻击、渗透攻击，设计产品防御能力验证方案</li>
+                        <li><span class="highlight">协议分析方案</span>：参与APT研发项目测试，深入分析FTP、SMB、POP3、SMTP等协议特征</li>
+                        <li><span class="highlight">系统级测试架构</span>：负责全局参数配置与规则模块测试，维护核心测试用例库</li>
                     </ul>
                 </div>
             </div>
@@ -632,7 +682,7 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <h3>项目经理 / 测试组长 / 测试工程师</h3>
+                        <h3>项目经理 / 测试组长</h3>
                         <p class="experience-company">安徽天傲通信科技有限公司</p>
                     </div>
                     <span class="experience-period">2010.07 - 2014.09</span>
@@ -640,12 +690,109 @@
                 <div class="experience-description">
                     <p>服务安徽移动省公司，负责质量竞赛、用户体验提升专项行动</p>
                     <ul>
-                        <li><strong>2013-2014 年</strong> 项目经理：安徽省移动用户体验专项行动</li>
-                        <li><strong>2012 年</strong> 测试组长：数据业务质量提升专项行动</li>
-                        <li><strong>2011 年</strong> 测试组长：质量提升劳动竞赛项目（外派深圳移动）</li>
-                        <li><strong>2010 年</strong> 测试工程师：增值业务大会战项目</li>
+                        <li><strong>2013-2014年</strong> 项目经理：安徽省移动用户体验专项行动，协调跨部门资源，设计用户体验提升方案</li>
+                        <li><strong>2012年</strong> 测试组长：数据业务质量提升专项行动，建立质量度量体系</li>
+                        <li><strong>2011年</strong> 测试组长：质量提升劳动竞赛项目（外派深圳移动），设计测试方案并落地</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">AI项目实践</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-type">独立设计开发 | AI产业研究</div>
+                <h3>AI产业全景跟踪系统</h3>
+                <p>
+                    独立构建AI产业全景跟踪系统，覆盖<strong>模型榜单、价格、CapEx、产业链、投资闭环</strong>等维度。
+                    数据采集/解析/可视化全链路自研，已部署至阿里云持续运行。
+                </p>
+                <p>
+                    <strong>技术栈</strong>：React + Vite + TypeScript + Python采集器 + SQLite + Docker + 阿里云部署
+                </p>
+                <p>
+                    <strong>亮点</strong>：覆盖19个权威数据源（OpenRouter、Arena、SWE-bench、官方IR等），质量审计自动化，投资闭环完整
+                </p>
+                <a href="http://47.88.90.29/" class="project-link" target="_blank">访问站点 →</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-type">独立设计开发 | 金融AI</div>
+                <h3>投资决策系统 (Investment Hub)</h3>
+                <p>
+                    独立构建投资决策辅助系统，涵盖<strong>DCF估值模型、港股现金流分析、A/H白马价值候选</strong>等模块。
+                    结合AI产业研究，设计"产业传导+胜率因子+公司证据链"的交易研究框架。
+                </p>
+                <p>
+                    <strong>技术栈</strong>：Windows服务 + SQLite + Python + 阿里云百炼模型
+                </p>
+                <p>
+                    <strong>亮点</strong>：现金流模型兜底、港股DCF复盘、A/H对比框架、胜率因子模型
+                </p>
+                <a href="http://100.64.93.19:8080/investment/" class="project-link" target="_blank">访问站点 →</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-type">独立设计开发 | 数据采集</div>
+                <h3>金融市场态势感知系统</h3>
+                <p>
+                    独立构建金融市场态势感知系统，Windows定时采集盘前/盘后数据，
+                    生成真实数据简报。展示<strong>系统集成与自动化能力</strong>。
+                </p>
+                <p>
+                    <strong>技术栈</strong>：Windows计划任务 + Python + SQLite + 自动化采集
+                </p>
+                <p>
+                    <strong>亮点</strong>：定时自动化、数据管道完整、简报生成闭环
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-type">企业级落地 | AI测试推广</div>
+                <h3>测试大模型工具推广</h3>
+                <p>
+                    主导测试大模型工具在科大讯飞集团内推广，设计<strong>推广策略、培训方案、运营指标</strong>。
+                    实现AI技术从试点到规模化落地。
+                </p>
+                <p>
+                    <strong>成果</strong>：采纳用例数<strong>23万+</strong>，用户活跃率<strong>72%</strong>，覆盖1000+项目
+                </p>
+                <p>
+                    <strong>亮点</strong>：企业级推广策略、用户运营闭环、效果量化评估
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-type">企业级落地 | 政务AI</div>
+                <h3>城市超脑交付项目</h3>
+                <p>
+                    负责"城市超脑"、数据中台等<strong>政务AI项目</strong>的交付测试与质量管理，
+                    建立过程交付模型与底线管控机制。
+                </p>
+                <p>
+                    <strong>成果</strong>：6个核心项目按期高质量交付，天津生态城等重大项目成功落地
+                </p>
+                <p>
+                    <strong>亮点</strong>：政务场景理解、交付项目管理、质量底线管控
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-type">运营实践 | AI内容</div>
+                <h3>抖音AI社会观察账号</h3>
+                <p>
+                    运营抖音账号<strong>961525887</strong>，定位"AI时代的社会观察账号"，
+                    展示AI内容理解与用户视角运营能力。
+                </p>
+                <p>
+                    <strong>定位</strong>：提供事实、矛盾和讨论场，不教育观众、不制造焦虑
+                </p>
+                <p>
+                    <strong>亮点</strong>：AI社会观察视角、内容运营策略、用户互动闭环
+                </p>
             </div>
         </div>
     </section>
@@ -655,70 +802,80 @@
         <h2 class="section-title">专业技能</h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>🏗️ 测试管理</h3>
+                <h3>🤖 AI解决方案能力</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">DevOps</span>
-                    <span class="skill-tag">IPD 流程</span>
-                    <span class="skill-tag">质量度量体系</span>
-                    <span class="skill-tag">测试规范</span>
-                    <span class="skill-tag">闭环管理</span>
-                    <span class="skill-tag">风险管理</span>
+                    <span class="skill-tag ai-highlight">大模型应用设计</span>
+                    <span class="skill-tag ai-highlight">AI产业研究</span>
+                    <span class="skill-tag ai-highlight">解决方案架构</span>
+                    <span class="skill-tag ai-highlight">需求分析</span>
+                    <span class="skill-tag ai-highlight">技术选型</span>
+                    <span class="skill-tag ai-highlight">系统集成</span>
+                    <span class="skill-tag">RAG应用</span>
+                    <span class="skill-tag">Agent设计</span>
+                    <span class="skill-tag">Prompt工程</span>
                 </div>
             </div>
             <div class="skill-card">
-                <h3>🛠️ 技术栈</h3>
+                <h3>📊 行业场景经验</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Jenkins</span>
-                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag ai-highlight">金融AI(DCF/港股)</span>
+                    <span class="skill-tag ai-highlight">政务AI(城市超脑)</span>
+                    <span class="skill-tag ai-highlight">企业AI(飞书/协同)</span>
+                    <span class="skill-tag">教育AI</span>
+                    <span class="skill-tag">医疗AI</span>
+                    <span class="skill-tag">测试AI</span>
+                    <span class="skill-tag">制造AI(汽车)</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>🏗️ 系统架构与开发</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag ai-highlight">React/Vite/TS</span>
+                    <span class="skill-tag ai-highlight">Python</span>
+                    <span class="skill-tag ai-highlight">Docker部署</span>
+                    <span class="skill-tag ai-highlight">云原生架构</span>
+                    <span class="skill-tag">SQLite</span>
+                    <span class="skill-tag">数据管道</span>
+                    <span class="skill-tag">API设计</span>
+                    <span class="skill-tag">CI/CD</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>📈 数据与分析</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag ai-highlight">数据采集/解析</span>
+                    <span class="skill-tag ai-highlight">质量审计</span>
+                    <span class="skill-tag ai-highlight">可视化看板</span>
                     <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">JMeter</span>
-                    <span class="skill-tag">接口测试</span>
-                    <span class="skill-tag">自动化框架</span>
+                    <span class="skill-tag">ETL</span>
+                    <span class="skill-tag">指标体系</span>
+                    <span class="skill-tag">量化分析</span>
                 </div>
             </div>
             <div class="skill-card">
-                <h3>📊 测试类型</h3>
+                <h3>🛠️ AI工具与技术栈</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">功能测试</span>
-                    <span class="skill-tag">性能测试</span>
-                    <span class="skill-tag">接口测试</span>
-                    <span class="skill-tag">兼容性测试</span>
-                    <span class="skill-tag">安全测试</span>
-                    <span class="skill-tag">大数据测试</span>
-                    <span class="skill-tag">AI 模型测试</span>
+                    <span class="skill-tag ai-highlight">Claude Code</span>
+                    <span class="skill-tag ai-highlight">DeepSeek V4</span>
+                    <span class="skill-tag ai-highlight">OpenRouter</span>
+                    <span class="skill-tag">阿里云百炼</span>
+                    <span class="skill-tag">Ollama本地</span>
+                    <span class="skill-tag">HuggingFace</span>
+                    <span class="skill-tag">MCP协议</span>
+                    <span class="skill-tag">Agent/Skill</span>
                 </div>
             </div>
             <div class="skill-card">
-                <h3>🔄 效能工具</h3>
+                <h3>👥 项目与软技能</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">禅道 ZenTao</span>
-                    <span class="skill-tag">Jenkins</span>
-                    <span class="skill-tag">CI/CD 流水线</span>
-                    <span class="skill-tag">Ops 运维平台</span>
-                    <span class="skill-tag">Git/SVN</span>
-                    <span class="skill-tag">JIRA</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>🌐 网络与安全</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">TCP/IP</span>
-                    <span class="skill-tag">路由交换</span>
-                    <span class="skill-tag">防火墙</span>
-                    <span class="skill-tag">WAF</span>
-                    <span class="skill-tag">DDoS 防护</span>
-                    <span class="skill-tag">协议分析</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>👥 软技能</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">跨组织协调</span>
+                    <span class="skill-tag ai-highlight">方案设计</span>
+                    <span class="skill-tag ai-highlight">项目管理</span>
+                    <span class="skill-tag ai-highlight">跨组织协调</span>
                     <span class="skill-tag">团队建设</span>
-                    <span class="skill-tag">售前支持</span>
-                    <span class="skill-tag">客户成功</span>
-                    <span class="skill-tag">品牌运营</span>
-                    <span class="skill-tag">数据驱动</span>
+                    <span class="skill-tag">客户沟通</span>
+                    <span class="skill-tag">文档撰写</span>
+                    <span class="skill-tag">培训推广</span>
+                    <span class="skill-tag">运营闭环</span>
                 </div>
             </div>
         </div>
@@ -771,27 +928,27 @@
         <h2 class="section-title">联系我</h2>
         <div class="about-content" style="text-align: center;">
             <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-                求职意向：<strong>售前 / 运营</strong> | 期望城市：<strong>海口</strong> | 到岗时间：<strong>一个月内</strong>
+                求职意向：<strong>AI解决方案架构师 / AI产品经理</strong> | 期望城市：<strong>海口 / 合肥</strong> | 到岗时间：<strong>一个月内</strong>
             </p>
             <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-                欢迎交流合作机会，期待与您共同探讨质量管理与测试技术！
+                擅长AI解决方案设计与落地，欢迎交流AI产业、金融AI、政务AI等方向的合作机会！
             </p>
             <div class="contact-info" style="justify-content: center;">
                 <div class="contact-item" style="color: var(--text-dark);">
                     <span>📱</span>
-                    <a href="tel:13739247505" style="color: var(--primary-color);">137-3924-7505</a>
+                    <a href="tel:13739247505" style="color: var(--ai-color);">137-3924-7505</a>
                 </div>
                 <div class="contact-item" style="color: var(--text-dark);">
                     <span>📧</span>
-                    <a href="mailto:luolinhan666@sina.com" style="color: var(--primary-color);">luolinhan666@sina.com</a>
+                    <a href="mailto:luolinhan666@gmail.com" style="color: var(--ai-color);">luolinhan666@gmail.com</a>
                 </div>
                 <div class="contact-item" style="color: var(--text-dark);">
                     <span>🐙</span>
-                    <a href="https://github.com/luolinhan" target="_blank" rel="noopener" style="color: var(--primary-color);">github.com/luolinhan</a>
+                    <a href="https://github.com/luolinhan" target="_blank" rel="noopener" style="color: var(--ai-color);">github.com/luolinhan</a>
                 </div>
                 <div class="contact-item" style="color: var(--text-dark);">
                     <span>📝</span>
-                    <a href="http://luolinhan.github.io/" target="_blank" rel="noopener" style="color: var(--primary-color);">luolinhan.github.io</a>
+                    <a href="http://luolinhan.github.io/" target="_blank" rel="noopener" style="color: var(--ai-color);">luolinhan.github.io</a>
                 </div>
             </div>
         </div>
@@ -799,13 +956,14 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; <span id="currentYear"></span> 罗林汉 | Luo Linhan</p>
+        <p>&copy; <span id="currentYear"></span> 罗林汉 | Luo Linhan | AI解决方案架构师</p>
         <p style="margin-top: 0.5rem; font-size: 0.875rem; opacity: 0.7;">
             最后更新：<span id="lastUpdate"></span>
         </p>
         <p style="margin-top: 0.5rem; font-size: 0.875rem;">
-            <a href="http://luolinhan.github.io/" target="_blank" rel="noopener">博客</a> ·
-            <a href="https://github.com/luolinhan" target="_blank" rel="noopener">GitHub</a>
+            <a href="http://47.88.90.29/" target="_blank" rel="noopener">AI产业全景</a> ·
+            <a href="https://github.com/luolinhan" target="_blank" rel="noopener">GitHub</a> ·
+            <a href="http://luolinhan.github.io/" target="_blank" rel="noopener">博客</a>
         </p>
     </footer>
 
